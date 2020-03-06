@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      {{ message }}
+    </div>
+    <div id="app-2">
+      <span v-bind:title="message">
+        Наведи на меня курсор на пару секунд,
+        чтобы увидеть динамически связанное значение title!
+      </span>
+    </div>
+    <div id="app-3">
+      <span v-if="seen">I visible now</span>
+    </div>
+    <div id="app-4">
+      <ol>
+        <li v-for="todo in todos">
+          {{ todo.text}}
+        </li>
+      </ol>
+    </div>
+    <div id="app-5">
+      <p>{{ message }}</p>
+      <p>{{ message_1 }}</p>
+      <button v-on:click="reverseMessage">Reverse</button>
+      <button v-on:click="reverseMessage1">Reverse</button>
+    </div>
+
+    <script src="js/index.js"></script>
+    <noscript>
+      <strong>We're sorry but doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+  </body>
+</html>
